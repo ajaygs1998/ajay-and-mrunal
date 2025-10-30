@@ -2,76 +2,48 @@ import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative overflow-hidden pt-20 pb-20 lg:pt-32 lg:pb-32">
-        {/* Background Gradients */}
-        <div aria-hidden="true" className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 -translate-x-1/2 -translate-y-1/2">
-            <div className="h-96 w-96 rounded-full bg-gradient-to-tr from-pink-400 to-yellow-300 opacity-30 blur-3xl"></div>
-          </div>
-          <div className="absolute bottom-0 left-0 translate-x-1/4 translate-y-1/4">
-            <div className="h-80 w-80 rounded-full bg-gradient-to-br from-[#E0C3FC] to-[#8EC5FC] opacity-20 blur-3xl"></div>
-          </div>
-        </div>
-
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="mx-auto max-w-2xl text-center">
-                <motion.h1
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-7xl mb-4 drop-shadow-lg"
-                >
-                  Ajay & Mrunal
-                </motion.h1>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.5 }}
-                >
-                  <p className="mt-6 text-2xl font-medium leading-10 text-pink-100 ">
-                    Together with their families<br/>
-                    Request the pleasure of your company to celebrate their wedding
-                  </p>
-                  <p className="mt-4 text-xl font-normal leading-8 text-slate-100">
-                    <span className="block">Saturday, 7th December 2024</span>
-                    <span className="block">At 6:00 PM</span>
-                    <span className="block">Lotus Banquet, Pune</span>
-                  </p>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 1 }}
-                  className="mt-10 flex items-center justify-center gap-x-6"
-                >
-                  <a
-                    href="#"
-                    className="rounded-lg bg-gradient-to-tr from-pink-500 to-yellow-400 px-7 py-3 text-lg font-semibold text-white shadow-lg hover:from-yellow-400 hover:to-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400 transition-all duration-200 transform hover:scale-105"
-                  >
-                    Add to Calendar
-                  </a>
-                  <a href="#" className="text-lg font-semibold leading-6 text-white hover:text-yellow-200">
-                    Venue & Details <span aria-hidden="true">→</span>
-                  </a>
-                </motion.div>
-            </div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, delay: 1.3 }}
-              className="mt-16 flow-root sm:mt-24"
-            >
-              <div className="-m-2 rounded-xl bg-white/10 p-2 ring-1 ring-inset ring-white/40 lg:-m-4 lg:rounded-2xl lg:p-4">
-                <img
-                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"
-                  alt="Ajay and Mrunal Wedding"
-                  width={1200}
-                  height={600}
-                  className="rounded-md shadow-2xl ring-1 ring-white/30"
-                />
-              </div>
-            </motion.div>
-        </div>
+    <section className="relative overflow-hidden pt-24 pb-16 min-h-[70vh] flex flex-col justify-center items-center bg-gradient-to-br from-[#FFEBCD] via-[#F8E8EE] to-[#FFF5EA]">
+      {/* Faint floral ornament top left */}
+      <div className="absolute left-0 top-0 opacity-30 z-0 pointer-events-none">
+        <svg width="160" height="160" fill="none" viewBox="0 0 160 160">
+          <ellipse cx="80" cy="80" rx="75" ry="25" fill="#EAD8C2" />
+        </svg>
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.p
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.12 }}
+          className="uppercase tracking-[0.16em] font-bold text-amber-600 text-lg md:text-xl mb-2"
+        >
+          Together with their families
+        </motion.p>
+        <motion.h1
+          initial={{ opacity: 0, y: 35 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-[2.8rem] sm:text-6xl font-serif text-gray-800 font-extrabold tracking-tight mb-2 drop-shadow-lg"
+        >
+          Ajay <span className="text-amber-500">&amp;</span> Mrunal
+        </motion.h1>
+        <div className="flex justify-center mb-2"><span className="inline-block w-20 h-1 rounded-full bg-gradient-to-r from-amber-400 via-rose-200 to-pink-400 opacity-70"></span></div>
+        <motion.div
+          initial={{ opacity: 0, y: 22 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.45 }}
+          className="mx-auto inline-block px-7 py-5 mt-6 rounded-2xl bg-white/85 border border-amber-200 shadow-md"
+        >
+          <div className="font-medium text-base text-amber-800 tracking-widest mb-1 uppercase">Wedding Ceremony</div>
+          <div className="text-xl font-extrabold text-rose-700 mb-1">Saturday, 7th December 2024</div>
+          <div className="text-amber-700 font-semibold">6:00 PM onwards</div>
+          <div className="text-gray-700 text-base">Lotus Banquet, Pune</div>
+        </motion.div>
+      </div>
+      <div className="absolute bottom-0 right-0 opacity-20 z-0 pointer-events-none">
+        <svg width="190" height="140" fill="none" viewBox="0 0 190 140">
+          <ellipse cx="170" cy="70" rx="75" ry="25" fill="#F2C98C" />
+        </svg>
+      </div>
     </section>
   );
 };

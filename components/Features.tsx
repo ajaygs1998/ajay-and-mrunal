@@ -1,113 +1,91 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const FeatureIcon1: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-    </svg>
-);
-
-const FeatureIcon2: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-    </svg>
-);
-
-const FeatureIcon3: React.FC<{ className?: string }> = ({ className }) => (
-    <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-    </svg>
-);
-
-
-const features = [
+const events = [
   {
-    name: 'Blazing Fast',
-    description: 'Our infrastructure is optimized for speed, ensuring your application loads instantly, no matter where your users are.',
-    icon: FeatureIcon1,
+    name: 'Haldi',
+    date: 'Friday, 6th December 2024',
+    time: '11:00 AM',
+    venue: 'Ajay Residence, Pune',
+    color: 'bg-yellow-100 border-yellow-300',
+    icon: '💛',
+    desc: 'A joyful, traditional haldi ceremony with family and friends.'
   },
   {
-    name: 'Mobile First',
-    description: 'Designed from the ground up to be fully responsive, providing a seamless experience on any device.',
-    icon: FeatureIcon2,
+    name: 'Mehendi',
+    date: 'Friday, 6th December 2024',
+    time: '4:00 PM',
+    venue: 'Ajay Residence, Pune',
+    color: 'bg-green-50 border-green-200',
+    icon: '🌿',
+    desc: "A festive evening for beautiful henna designs and music."
   },
   {
-    name: 'Enterprise-Grade Security',
-    description: 'We adhere to the highest security standards, so you can rest easy knowing your data is safe and secure.',
-    icon: FeatureIcon3,
+    name: 'Sangeet',
+    date: 'Friday, 6th December 2024',
+    time: '7:30 PM',
+    venue: 'Mrunal Residence, Pune',
+    color: 'bg-pink-50 border-pink-200',
+    icon: '🎶',
+    desc: "Dance and musical evening to celebrate together!"
   },
+  {
+    name: 'Wedding',
+    date: 'Saturday, 7th December 2024',
+    time: '6:00 PM',
+    venue: 'Lotus Banquet, Pune',
+    color: 'bg-amber-50 border-amber-300',
+    icon: '💍',
+    desc: "The auspicious wedding ceremony. Join us for blessings and celebration."
+  },
+  {
+    name: 'Reception',
+    date: 'Sunday, 8th December 2024',
+    time: '8:00 PM',
+    venue: 'The Grand Lawn, Pune',
+    color: 'bg-purple-50 border-purple-200',
+    icon: '🥂',
+    desc: "Greet the newlyweds and celebrate with good food, drinks, and music!"
+  }
 ];
 
-const Features: React.FC = () => {
+const Events: React.FC = () => {
   return (
-    <motion.section
-      id="features"
-      className="py-20 sm:py-32"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-    >
+    <section className="py-16 bg-gradient-to-br from-[#FFF4EC] via-[#F6E0F8] to-[#F9FFE9] min-h-[40vh]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <motion.p
-            className="text-base font-semibold leading-7 text-cyan-400"
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            viewport={{ once: true }}
-          >Everything you need</motion.p>
+        <div className="mx-auto max-w-2xl text-center mb-14">
           <motion.h2
-            className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl"
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-          >A Better Workflow</motion.h2>
-          <motion.p
-            className="mt-6 text-lg leading-8 text-slate-400"
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            viewport={{ once: true }}
-          >
-            Our platform is designed to streamline your development process from start to finish, empowering you to build and deploy applications with unprecedented speed and efficiency.
-          </motion.p>
+            className="text-3xl sm:text-4xl font-serif font-bold text-rose-800 mb-1"
+          >Wedding Events</motion.h2>
+          <div className="mx-auto w-16 h-1 bg-gradient-to-r from-amber-400 via-pink-400 to-purple-300 rounded-full mb-2"></div>
+          <p className="text-xl text-gray-600">You’re warmly invited to all of our celebrations!</p>
         </div>
-        <motion.div
-          className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.2 } },
-          }}
-        >
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
-            {features.map((feature, idx) => (
-              <motion.div
-                key={feature.name}
-                className="relative pl-16"
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.25 + 0.5 }}
-                viewport={{ once: true }}
-              >
-                <dt className="text-base font-semibold leading-7 text-white">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-cyan-500">
-                    <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
-                  {feature.name}
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-slate-400">{feature.description}</dd>
-              </motion.div>
-            ))}
-          </dl>
-        </motion.div>
+        <div className="flex flex-col gap-8 md:flex-row md:gap-6 md:justify-center md:flex-wrap">
+          {events.map((event, idx) => (
+            <motion.div
+              key={event.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.18 + 0.2, duration: 0.7 }}
+              viewport={{ once: true }}
+              className={`flex-1 min-w-[260px] max-w-[340px] rounded-2xl p-6 shadow-md border ${event.color} backdrop-blur-xl`}
+            >
+              <div className="text-3xl pb-2">{event.icon}</div>
+              <div className="font-serif text-2xl font-bold text-gray-800 mb-1">{event.name}</div>
+              <div className="text-lg text-amber-600 font-semibold mb-1">{event.date}</div>
+              <div className="text-base text-rose-700 font-medium mb-1">{event.time}</div>
+              <div className="text-base text-pink-900 font-medium mb-2">{event.venue}</div>
+              <div className="text-gray-600 text-sm italic">{event.desc}</div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
-export default Features;
+export default Events;
