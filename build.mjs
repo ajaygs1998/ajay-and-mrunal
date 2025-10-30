@@ -1,8 +1,6 @@
 import esbuild from 'esbuild';
 import { promises as fs } from 'fs';
 import path from 'path';
-// Fix: Import `process` to provide correct types and resolve the error.
-import process from 'process';
 
 const outdir = 'dist';
 
